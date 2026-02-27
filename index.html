@@ -2,17 +2,39 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <!-- PWA/모바일 최적화 메타 태그 -->
+
+    <!-- 1. PWA/모바일 최적화 (화면 확대 방지 및 앱 형태 구동) -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+    <!-- 2. 아이콘 및 매니페스트 (대소문자 icon 일치) -->
+    <link rel="icon" type="image/png" href="icon-192.png">
     <link rel="apple-touch-icon" href="icon-192.png">
     <link rel="manifest" href="manifest.json">
-    <title>테니스 경기 관리</title>
-    <script type="application/javascript" src="tennismanager.js"></script>
+
+    <title>테니스 다이어리</title>
+
+    <!-- 3. [주의] 우리 프로젝트 빌드 환경에 맞춘 스크립트 파일명 -->
+    <script type="application/javascript" src="composeApp.js"></script>
+
+    <!-- 4. Compose Web 캔버스 최적화 스타일 (스크롤 및 텍스트 선택 방지) -->
     <style>
-        body, html { margin: 0; padding: 0; width: 100%; height: 100%; overflow: hidden; background-color: #F3F4F6; -webkit-user-select: none; user-select: none; }
-        canvas { width: 100%; height: 100%; outline: none; }
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            background-color: #F3F4F6;
+            -webkit-user-select: none;
+            user-select: none;
+        }
+        canvas {
+            width: 100%;
+            height: 100%;
+            outline: none;
+        }
     </style>
 </head>
 <body>
